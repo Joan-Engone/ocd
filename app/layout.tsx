@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, JetBrains_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MotionProvider from "@/components/MotionProvider";
 import "./globals.css";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist", display: "swap" });
@@ -25,9 +26,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
-        <Header />
-        <main className="w-full pt-20 min-h-screen">{children}</main>
-        <Footer />
+        <MotionProvider>
+          <Header />
+          <main className="w-full pt-20 min-h-screen">{children}</main>
+          <Footer />
+        </MotionProvider>
       </body>
     </html>
   );

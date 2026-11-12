@@ -142,3 +142,43 @@
   line-height: 1;
   user-select: none;
 }
+
+@keyframes idle-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.idle-float {
+  animation: idle-float 4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .idle-float { animation: none; }
+}
+
+
+@layer utilities {
+  /* WebKit browsers (Chrome, Safari, Edge) */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #ebccb6; /* Your brand orange */
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ebccb6;
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-color: #ed9c63 transparent;
+    scrollbar-width: thin;
+  }
+}

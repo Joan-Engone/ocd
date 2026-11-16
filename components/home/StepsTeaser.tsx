@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "motion/react";
+import Words from "@/components/motion/Words";
 import { ease, spring, PLAY_ONCE, rise, pop, trigger } from "@/lib/motion";
 import Icon from "@/components/Icon";
 
@@ -48,14 +49,13 @@ export default function StepsTeaser() {
             >
               Processus Clés en Main
             </motion.span>
-            <motion.h2
-              variants={rise}
-              {...trigger(0.12)}
+            <h2
+              aria-label="Un Live prêt en 4 étapes simples"
               className="text-3xl sm:text-4xl font-extrabold text-on-surface tracking-tight"
             >
-              Un Live prêt en 4 étapes simples
-            </motion.h2>
-            <motion.p variants={rise} {...trigger(0.24)} className="text-xs sm:text-sm text-on-surface-variant">
+              <Words delay={0.15} parts={[{ text: "Un Live prêt en 4 étapes simples" }]} />
+            </h2>
+            <motion.p variants={rise} {...trigger(0.7)} className="text-xs sm:text-sm text-on-surface-variant">
               Prise en charge complète par nos équipes, de la configuration à la vente.
             </motion.p>
           </div>

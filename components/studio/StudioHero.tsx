@@ -54,7 +54,7 @@ export default function StudioHero({ metrics = defaultMetrics }: StudioHeroProps
             <span className="relative inline-flex h-2 w-2 rounded-full bg-[#FF6B00]" />
           </span>
 
-          <span className="text-[10px] font-black uppercase tracking-widest text-on-surface-variant sm:text-xs">
+          <span className="text-xs font-bold text-on-surface-variant tracking-wider uppercase">
             Formules B2B • En Présentiel ou en Ligne • Partout dans le Monde
           </span>
         </motion.div>

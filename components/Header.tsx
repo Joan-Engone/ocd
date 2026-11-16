@@ -11,7 +11,7 @@ import { nav } from "@/lib/data";
 
 const CTA = {
   label: "Réserver un Live",
-  href: "/studio-formules#formules",
+  href: "/reserver",
 };
 
 const ACCOUNT = {

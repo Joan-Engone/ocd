@@ -12,14 +12,17 @@ export const metadata: Metadata = {
   title: "StudioLive Pro — TikTok LIVE gérés à distance",
   description:
     "Animateurs certifiés et régie broadcast cloud pour vos TikTok LIVE Shopping, sans studio.",
+  icons: {
+    icon: "/images/ocd-logo.png",
+    shortcut: "/images/ocd-logo.png",
+    apple: "/images/ocd-logo.png",
+  },
 };
 
-// The ONLY layout file: <html>, <body>, Header and Footer for every page.
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr" className={`${geist.variable} ${mono.variable}`}>
       <head>
-        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"

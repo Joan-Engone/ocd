@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { motion } from "motion/react";
+import Words from "@/components/motion/Words";
 import CountPrice from "@/components/motion/CountPrice";
 import { ease, PLAY_ONCE, rise, slideIn, pop, trigger } from "@/lib/motion";
 import Icon from "@/components/Icon";
@@ -33,14 +34,18 @@ export default function PricingTeaser({ plans = defaultPlans }) {
                 Tarifs &amp; Transparence
               </motion.span>
 
-              <motion.h2
-                variants={rise}
-                {...trigger(0.12)}
+              <h2
+                aria-label="Des formules claires, sans frais cachés."
                 className="mt-3 text-3xl font-extrabold leading-[1.15] tracking-tight text-on-surface sm:text-4xl"
               >
-                Des formules claires, sans frais cachés
-                <span className="text-[#FF6B00]">.</span>
-              </motion.h2>
+                <Words
+                  delay={0.15}
+                  parts={[
+                    { text: "Des formules claires, sans frais cachés" },
+                    { text: ".", className: "text-[#FF6B00]", glue: true },
+                  ]}
+                />
+              </h2>
 
               <div className="relative mt-8 pt-6">
                 {/* The top line draws itself */}

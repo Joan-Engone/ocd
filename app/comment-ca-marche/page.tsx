@@ -3,7 +3,6 @@ import HowHero from "@/components/how/HowHero";
 import Phases from "@/components/how/Phases";
 import TechArchitecture from "@/components/how/TechArchitecture";
 import ChoiceGuide from "@/components/how/ChoiceGuide";
-import HowFaq from "@/components/how/HowFaq";
 
 export const metadata: Metadata = {
   title: "Comment ça marche — StudioLive Pro",
